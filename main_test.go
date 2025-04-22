@@ -60,3 +60,19 @@ func ExampleCreateVCItem() {
 
 	// Output:
 }
+
+func ExampleCreateVCItemData() {
+	// VC 序號
+	vcID := 391655
+	// Create a VC item data
+	_, err := twallet.CreateVCItemData(accessToken, vcID, []twallet.VCItemDataField{
+		{
+			Ename:   "name",
+			Content: "Pichu_Chen",
+		},
+	}, nil)
+	if err != nil {
+		panic(err)
+	}
+	// Output:
+}
